@@ -35,28 +35,10 @@ asyncio.run(main())
 ## Features
 
 - **Zero User Fees** - Facilitator pays network costs
-- **Instant Settlement** - Sub-2 second finality
+- **Instant Settlement** - Sub-2 second finality  
 - **Multi-Token Support** - SOL, USDC, USDT
 - **Async/Await** - Built for asyncio
 - **Type Hints** - Full type annotations
-
-## Examples
-
-### Verify Payment
-```python
-async def verify():
-    async with QweryClient(network=Network.MAINNET) as client:
-        result = await client.verify_payment("transaction_signature")
-        print(f"Verified: {result.verified}")
-```
-
-### Health Check
-```python
-async def check_health():
-    async with QweryClient(network=Network.MAINNET) as client:
-        health = await client.health()
-        print(f"Status: {health.status}")
-```
 
 ## Documentation
 
