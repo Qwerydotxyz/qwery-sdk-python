@@ -1,9 +1,13 @@
+<div align="center">
+  <img src="https://res.cloudinary.com/dkfwg4ta8/image/upload/v1763973825/pysdk402_f5exsu.png" alt="Qwery Python SDK" width="100%" />
+</div>
+
 # Qwery SDK for Python
 
 Python SDK for integrating Qwery x402 Payment Facilitator into your applications.
 
-[![PyPI version](https://badge.fury.io/py/qwery-sdk.svg)](https://pypi.org/project/qwery-sdk/)
-[![Python](https://img.shields.io/pypi/pyversions/qwery-sdk.svg)](https://pypi.org/project/qwery-sdk/)
+[![PyPI version](https://img.shields.io/pypi/v/qwery-sdk)](https://pypi.org/project/qwery-sdk/)
+[![Python](https://img.shields.io/pypi/pyversions/qwery-sdk)](https://pypi.org/project/qwery-sdk/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
@@ -36,9 +40,28 @@ asyncio.run(main())
 - **Async/Await** - Built for asyncio
 - **Type Hints** - Full type annotations
 
+## Examples
+
+### Verify Payment
+```python
+async def verify():
+    async with QweryClient(network=Network.MAINNET) as client:
+        result = await client.verify_payment("transaction_signature")
+        print(f"Verified: {result.verified}")
+```
+
+### Health Check
+```python
+async def check_health():
+    async with QweryClient(network=Network.MAINNET) as client:
+        health = await client.health()
+        print(f"Status: {health.status}")
+```
+
 ## Documentation
 
 - **API Docs**: https://docs.qwery.xyz
+- **Facilitator API**: https://facilitator.qwery.xyz/docs
 - **Website**: https://qwery.xyz
 
 ## License
