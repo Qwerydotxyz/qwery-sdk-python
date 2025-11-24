@@ -35,7 +35,7 @@ asyncio.run(main())
 ## Features
 
 - **Zero User Fees** - Facilitator pays network costs
-- **Instant Settlement** - Sub-2 second finality  
+- **Instant Settlement** - Sub-2 second finality
 - **Multi-Token Support** - SOL, USDC, USDT
 - **Async/Await** - Built for asyncio
 - **Type Hints** - Full type annotations
