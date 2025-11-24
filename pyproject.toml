@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwery-sdk"
+version = "0.1.0"
+description = "Python SDK for Qwery x402 Payment Facilitator - Zero fee Solana payments"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Qwery", email = "support@qwery.xyz"}]
+keywords = ["solana", "payments", "x402", "web3", "cryptocurrency", "blockchain"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.8"
+dependencies = ["httpx>=0.24.0", "pydantic>=2.0.0"]
+
+[project.optional-dependencies]
+solana = ["solana>=0.30.0", "solders>=0.18.0"]
+dev = ["pytest>=7.0.0", "pytest-asyncio>=0.21.0", "black>=23.0.0"]
+
+[project.urls]
+Homepage = "https://qwery.xyz"
+Documentation = "https://docs.qwery.xyz"
+Repository = "https://github.com/Qwerydotxyz/qwery-sdk-python"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qwery_sdk*"]
